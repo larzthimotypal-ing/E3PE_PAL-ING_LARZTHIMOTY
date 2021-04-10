@@ -1,0 +1,33 @@
+/*First Rule: !important always takes precedence*/
+/* first in precedence */
+.color{
+    color:violet !important; 
+}
+
+/*Second Rule: Highest points using specificity formula takes precedence*/
+/* 11 when calculated with specificity formula */
+span.color{
+    color: brown;
+}
+
+/* 122 when calculated with specificity formula 
+since 122 > 11, this code gets executed first*/
+.container h1 span.color#colour{
+    color: green;
+} 
+
+/*Third Rule: Incase of equal points in specificity, 
+the code last read takes precedence*/
+.color{
+    color: red;
+}
+
+.kulay{
+    color: orange;
+} 
+
+.tinta{
+    color: yellow;
+}
+/*This means that .tinta takes precedence over .kulay, 
+then .kulay takes precedence over .color*/
